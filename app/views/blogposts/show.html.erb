@@ -13,3 +13,22 @@
 
 <%= link_to 'Edit', edit_blogpost_path(@blogpost) %> |
 <%= link_to 'Back', blogposts_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comment</th>
+      <th>Author</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bpcomments.each do |comment| %>
+      <tr>
+        <td><%= comment.commenttext %></td>
+        <td><%= comment.author %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
